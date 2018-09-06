@@ -177,7 +177,7 @@ df.loc[df.customer_type=='active','recent_time'].min(),df.loc[df.customer_type==
 
 
 
-##### From the above values we also get to know that the data is collected on different dates between 10-Oct & 13-Jan. 
+##### From the above values we also get to know that the data is collected on different dates between 10-Oct & 13-Jan.
 Now we will drop the user details for which we do not have enough data. The customer should have done atleast 6 orders or must have been active for atleast 50 days. We are dropping the other customers as they would have availed the app for either using the joining offers.
 
 
@@ -231,7 +231,7 @@ df.hist(column='active_days',by='customer_type',bins=30)
 
 
 
-![png](output_14_1.png)
+![png](https://raw.githubusercontent.com/yasarc4/FoodDelivery-Churn/master/images/output_14_1.png)
 
 
 ### From the above chart we can say that a majority of customers churn out between 50-90 days of their first activity. So If we can engage our customer during this period, they might probably not churn out. Even the customer inactivity starts to change pattern during this period and this period should be targetted to retain any customer.
@@ -253,7 +253,7 @@ df.hist(column='no_of_orders',by='customer_type', bins=30)
 
 
 
-![png](output_16_1.png)
+![png](https://raw.githubusercontent.com/yasarc4/FoodDelivery-Churn/master/images/output_16_1.png)
 
 
 
@@ -273,7 +273,7 @@ df.hist(column='amount',by='customer_type', bins=30)
 
 
 
-![png](output_17_1.png)
+![png](https://raw.githubusercontent.com/yasarc4/FoodDelivery-Churn/master/images/output_17_1.png)
 
 
 #### From the above 2 plots we could not identify any pattern. This might also mean that we might need to derive features to make sense. So we derive the below 2 features to understand Customer Activity better.
@@ -301,7 +301,7 @@ df.hist(column='avg_order_per_day',by='customer_type', bins=30)
 
 
 
-![png](output_20_1.png)
+![png](https://raw.githubusercontent.com/yasarc4/FoodDelivery-Churn/master/images/output_20_1.png)
 
 
 From the above graphs we can say that the average orders per day of an active customer ranges upto 6, whereas for a churned customer, this ranges only upto 1.2 orders per day. So if a customer starts showing inactivity, theres a high probability of churning out later than coming back.
@@ -323,7 +323,7 @@ df.hist(column='avg_order_amount',by='customer_type', bins=30)
 
 
 
-![png](output_22_1.png)
+![png](https://raw.githubusercontent.com/yasarc4/FoodDelivery-Churn/master/images/output_22_1.png)
 
 
 The spending per order pattern doesn't seem to significantly vary between the active and churn customers.
@@ -347,7 +347,7 @@ pivot_ui(df)
             frameborder="0"
             allowfullscreen
         ></iframe>
-        
+
 
 
 
@@ -369,7 +369,7 @@ pivot_ui(df)
             frameborder="0"
             allowfullscreen
         ></iframe>
-        
+
 
 
 
@@ -795,7 +795,7 @@ df.boxplot(column='avg_deliverytime',by='customer_type')
 
 
 
-![png](output_43_1.png)
+![png](https://raw.githubusercontent.com/yasarc4/FoodDelivery-Churn/master/images/output_43_1.png)
 
 
 There is no significant/observable difference in the Delivery time pattern for Active and Churn Customers.
@@ -3052,7 +3052,7 @@ define('catboost_module', modules, function(widgets) {
 });
 
             </script>
-        
+
 
 
     0:	learn: 0.6773258	total: 94.2ms	remaining: 1.32s
@@ -3128,46 +3128,46 @@ opt_params
 
     [31mInitialization[0m
     [94m------------------------------------------------------------------------------------------------------------------------------------------------------------------------[0m
-     Step |   Time |      Value |   bagging_fraction |   feature_fraction |   lambda_l1 |   lambda_l2 |   max_depth |   min_child_weight |   min_split_gain |   num_leaves | 
+     Step |   Time |      Value |   bagging_fraction |   feature_fraction |   lambda_l1 |   lambda_l2 |   max_depth |   min_child_weight |   min_split_gain |   num_leaves |
 
 
 
     MetricVisualizer(data={'catboost_info': {'path': 'catboost_info', 'name': 'catboost_info', 'content': {'passed…
 
 
-        1 | 00m00s | [35m   0.80331[0m | [32m            0.8244[0m | [32m            0.5895[0m | [32m     4.3155[0m | [32m     0.0943[0m | [32m     6.5508[0m | [32m           48.3101[0m | [32m          0.0809[0m | [32m    110.5188[0m | 
-        2 | 00m00s |    0.79871 |             0.8990 |             0.2116 |      3.1165 |      1.9092 |      6.0827 |            16.3302 |           0.0897 |     243.6150 | 
-        3 | 00m00s |    0.79938 |             0.8069 |             0.3337 |      1.6545 |      0.9431 |      8.3067 |            27.3762 |           0.0325 |     193.0906 | 
-        4 | 00m00s |    0.79856 |             0.9819 |             0.3931 |      0.3178 |      1.5257 |      6.4234 |            18.5395 |           0.0119 |     162.2901 | 
-        5 | 00m00s |    0.80311 |             0.8518 |             0.4649 |      1.5549 |      2.7227 |      6.1209 |            17.8178 |           0.0236 |      60.0403 | 
-        6 | 00m00s |    0.79867 |             0.9325 |             0.7281 |      1.6259 |      0.7479 |      7.1654 |             6.6599 |           0.0433 |      60.0347 | 
-        7 | 00m00s |    0.79644 |             0.8623 |             0.2597 |      3.6480 |      1.2311 |      5.5623 |            32.4304 |           0.0820 |      37.4173 | 
-        8 | 00m00s | [35m   0.80395[0m | [32m            0.9040[0m | [32m            0.5114[0m | [32m     3.1878[0m | [32m     2.2667[0m | [32m     8.2008[0m | [32m           27.6206[0m | [32m          0.0862[0m | [32m    224.0867[0m | 
-        9 | 00m00s |    0.80180 |             0.9093 |             0.5739 |      4.4361 |      0.6864 |      5.2975 |             7.3165 |           0.0017 |     162.8576 | 
-       10 | 00m00s |    0.80004 |             0.8370 |             0.1372 |      2.3611 |      0.2309 |      8.9377 |            17.5391 |           0.0516 |     187.5648 | 
-       11 | 00m00s |    0.80181 |             0.9939 |             0.5860 |      0.5980 |      0.8693 |      8.0813 |            45.8720 |           0.0423 |      28.7550 | 
-       12 | 00m00s |    0.79813 |             0.9550 |             0.2364 |      3.5662 |      0.4837 |      5.7929 |            15.7803 |           0.0230 |     248.0492 | 
-       13 | 00m00s |    0.79782 |             0.9879 |             0.1520 |      3.8039 |      2.7891 |      5.0220 |            11.5203 |           0.0129 |     216.2943 | 
-       14 | 00m00s | [35m   0.80680[0m | [32m            0.9790[0m | [32m            0.8591[0m | [32m     2.8064[0m | [32m     2.4244[0m | [32m     8.2537[0m | [32m           27.0254[0m | [32m          0.0344[0m | [32m     73.0503[0m | 
-       15 | 00m00s |    0.80541 |             0.9196 |             0.8725 |      3.8548 |      1.9002 |      7.8204 |            49.3543 |           0.0943 |      66.0016 | 
-       16 | 00m00s |    0.80247 |             0.9844 |             0.7467 |      2.4690 |      2.6144 |      7.9087 |            15.8925 |           0.0330 |      66.3664 | 
-       17 | 00m00s |    0.80010 |             0.8177 |             0.3437 |      2.6137 |      2.4110 |      8.0774 |            35.2461 |           0.0524 |      94.2800 | 
-       18 | 00m00s |    0.80044 |             0.8392 |             0.1781 |      2.1377 |      0.5597 |      5.2954 |            39.2729 |           0.0706 |     145.2187 | 
-       19 | 00m00s |    0.80267 |             0.8090 |             0.6474 |      0.1271 |      2.6777 |      6.4303 |            15.6937 |           0.0370 |     123.7793 | 
-       20 | 00m00s |    0.80193 |             0.8651 |             0.4521 |      0.5395 |      1.6180 |      5.4623 |            37.7697 |           0.0972 |      91.2739 | 
+        1 | 00m00s | [35m   0.80331[0m | [32m            0.8244[0m | [32m            0.5895[0m | [32m     4.3155[0m | [32m     0.0943[0m | [32m     6.5508[0m | [32m           48.3101[0m | [32m          0.0809[0m | [32m    110.5188[0m |
+        2 | 00m00s |    0.79871 |             0.8990 |             0.2116 |      3.1165 |      1.9092 |      6.0827 |            16.3302 |           0.0897 |     243.6150 |
+        3 | 00m00s |    0.79938 |             0.8069 |             0.3337 |      1.6545 |      0.9431 |      8.3067 |            27.3762 |           0.0325 |     193.0906 |
+        4 | 00m00s |    0.79856 |             0.9819 |             0.3931 |      0.3178 |      1.5257 |      6.4234 |            18.5395 |           0.0119 |     162.2901 |
+        5 | 00m00s |    0.80311 |             0.8518 |             0.4649 |      1.5549 |      2.7227 |      6.1209 |            17.8178 |           0.0236 |      60.0403 |
+        6 | 00m00s |    0.79867 |             0.9325 |             0.7281 |      1.6259 |      0.7479 |      7.1654 |             6.6599 |           0.0433 |      60.0347 |
+        7 | 00m00s |    0.79644 |             0.8623 |             0.2597 |      3.6480 |      1.2311 |      5.5623 |            32.4304 |           0.0820 |      37.4173 |
+        8 | 00m00s | [35m   0.80395[0m | [32m            0.9040[0m | [32m            0.5114[0m | [32m     3.1878[0m | [32m     2.2667[0m | [32m     8.2008[0m | [32m           27.6206[0m | [32m          0.0862[0m | [32m    224.0867[0m |
+        9 | 00m00s |    0.80180 |             0.9093 |             0.5739 |      4.4361 |      0.6864 |      5.2975 |             7.3165 |           0.0017 |     162.8576 |
+       10 | 00m00s |    0.80004 |             0.8370 |             0.1372 |      2.3611 |      0.2309 |      8.9377 |            17.5391 |           0.0516 |     187.5648 |
+       11 | 00m00s |    0.80181 |             0.9939 |             0.5860 |      0.5980 |      0.8693 |      8.0813 |            45.8720 |           0.0423 |      28.7550 |
+       12 | 00m00s |    0.79813 |             0.9550 |             0.2364 |      3.5662 |      0.4837 |      5.7929 |            15.7803 |           0.0230 |     248.0492 |
+       13 | 00m00s |    0.79782 |             0.9879 |             0.1520 |      3.8039 |      2.7891 |      5.0220 |            11.5203 |           0.0129 |     216.2943 |
+       14 | 00m00s | [35m   0.80680[0m | [32m            0.9790[0m | [32m            0.8591[0m | [32m     2.8064[0m | [32m     2.4244[0m | [32m     8.2537[0m | [32m           27.0254[0m | [32m          0.0344[0m | [32m     73.0503[0m |
+       15 | 00m00s |    0.80541 |             0.9196 |             0.8725 |      3.8548 |      1.9002 |      7.8204 |            49.3543 |           0.0943 |      66.0016 |
+       16 | 00m00s |    0.80247 |             0.9844 |             0.7467 |      2.4690 |      2.6144 |      7.9087 |            15.8925 |           0.0330 |      66.3664 |
+       17 | 00m00s |    0.80010 |             0.8177 |             0.3437 |      2.6137 |      2.4110 |      8.0774 |            35.2461 |           0.0524 |      94.2800 |
+       18 | 00m00s |    0.80044 |             0.8392 |             0.1781 |      2.1377 |      0.5597 |      5.2954 |            39.2729 |           0.0706 |     145.2187 |
+       19 | 00m00s |    0.80267 |             0.8090 |             0.6474 |      0.1271 |      2.6777 |      6.4303 |            15.6937 |           0.0370 |     123.7793 |
+       20 | 00m00s |    0.80193 |             0.8651 |             0.4521 |      0.5395 |      1.6180 |      5.4623 |            37.7697 |           0.0972 |      91.2739 |
     [31mBayesian Optimization[0m
     [94m------------------------------------------------------------------------------------------------------------------------------------------------------------------------[0m
-     Step |   Time |      Value |   bagging_fraction |   feature_fraction |   lambda_l1 |   lambda_l2 |   max_depth |   min_child_weight |   min_split_gain |   num_leaves | 
-       21 | 00m31s |    0.80592 |             0.8261 |             0.8715 |      3.6218 |      1.9088 |      8.9284 |            49.6475 |           0.0403 |     254.5828 | 
-       22 | 00m35s |    0.80326 |             0.8381 |             0.5783 |      0.0593 |      0.0289 |      8.8951 |            42.8567 |           0.0355 |      59.2181 | 
-       23 | 00m34s |    0.80497 |             0.8544 |             0.8766 |      4.6998 |      2.8758 |      8.5947 |            13.2662 |           0.0382 |     253.8719 | 
-       24 | 00m33s |    0.80372 |             0.9402 |             0.8827 |      0.2085 |      2.8628 |      5.2706 |            11.6602 |           0.0680 |      25.1798 | 
-       25 | 00m32s |    0.79333 |             0.8123 |             0.8531 |      0.3316 |      0.5028 |      8.6531 |             5.3363 |           0.0838 |     227.6976 | 
-       26 | 00m33s |    0.80591 |             0.8438 |             0.8940 |      4.7047 |      2.6505 |      8.3990 |            49.1735 |           0.0428 |     158.8493 | 
-       27 | 00m31s |    0.80567 |             0.9726 |             0.8969 |      4.8429 |      2.1615 |      6.3391 |            49.7090 |           0.0430 |     227.5931 | 
-       28 | 00m31s | [35m   0.80775[0m | [32m            0.8119[0m | [32m            0.8664[0m | [32m     4.8332[0m | [32m     0.2030[0m | [32m     8.8560[0m | [32m           27.1139[0m | [32m          0.0121[0m | [32m    148.3843[0m | 
-       29 | 00m30s |    0.80508 |             0.8944 |             0.8139 |      4.9929 |      2.7676 |      5.1131 |            40.0485 |           0.0475 |     252.6598 | 
-       30 | 00m32s |    0.80587 |             0.8315 |             0.8932 |      4.8316 |      2.9819 |      5.1973 |            38.3108 |           0.0887 |     125.9258 | 
+     Step |   Time |      Value |   bagging_fraction |   feature_fraction |   lambda_l1 |   lambda_l2 |   max_depth |   min_child_weight |   min_split_gain |   num_leaves |
+       21 | 00m31s |    0.80592 |             0.8261 |             0.8715 |      3.6218 |      1.9088 |      8.9284 |            49.6475 |           0.0403 |     254.5828 |
+       22 | 00m35s |    0.80326 |             0.8381 |             0.5783 |      0.0593 |      0.0289 |      8.8951 |            42.8567 |           0.0355 |      59.2181 |
+       23 | 00m34s |    0.80497 |             0.8544 |             0.8766 |      4.6998 |      2.8758 |      8.5947 |            13.2662 |           0.0382 |     253.8719 |
+       24 | 00m33s |    0.80372 |             0.9402 |             0.8827 |      0.2085 |      2.8628 |      5.2706 |            11.6602 |           0.0680 |      25.1798 |
+       25 | 00m32s |    0.79333 |             0.8123 |             0.8531 |      0.3316 |      0.5028 |      8.6531 |             5.3363 |           0.0838 |     227.6976 |
+       26 | 00m33s |    0.80591 |             0.8438 |             0.8940 |      4.7047 |      2.6505 |      8.3990 |            49.1735 |           0.0428 |     158.8493 |
+       27 | 00m31s |    0.80567 |             0.9726 |             0.8969 |      4.8429 |      2.1615 |      6.3391 |            49.7090 |           0.0430 |     227.5931 |
+       28 | 00m31s | [35m   0.80775[0m | [32m            0.8119[0m | [32m            0.8664[0m | [32m     4.8332[0m | [32m     0.2030[0m | [32m     8.8560[0m | [32m           27.1139[0m | [32m          0.0121[0m | [32m    148.3843[0m |
+       29 | 00m30s |    0.80508 |             0.8944 |             0.8139 |      4.9929 |      2.7676 |      5.1131 |            40.0485 |           0.0475 |     252.6598 |
+       30 | 00m32s |    0.80587 |             0.8315 |             0.8932 |      4.8316 |      2.9819 |      5.1973 |            38.3108 |           0.0887 |     125.9258 |
 
 
 
@@ -3213,7 +3213,7 @@ def blender(actual, all_predictions, iterations = 1000):
     all_weights = all_weights/all_weights.sum(axis=1).reshape(-1,1)
     all_scores = [roc_auc_score(actual,(weight*all_predictions.T).sum(axis=1)) for weight in all_weights]
     return all_weights[np.argmax(all_scores)], np.max(all_scores)
-    
+
 ```
 
 
@@ -3249,5 +3249,4 @@ plt.show()
 ```
 
 
-![png](output_67_0.png)
-
+![png](https://raw.githubusercontent.com/yasarc4/FoodDelivery-Churn/master/images/output_67_0.png)
